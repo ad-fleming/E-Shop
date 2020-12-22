@@ -1,6 +1,9 @@
-const express = require('express')
-const dotenv = require('dotenv')
-const products = require('./data/products')
+// Converted to uses ES modules syntax. Added "type": "module" to package json. 
+// When importing files, make sure to include the file extension "example.js"
+
+import express from 'express'
+import dotenv from 'dotenv'
+import products from './data/products.js'
 
 dotenv.config()
 
