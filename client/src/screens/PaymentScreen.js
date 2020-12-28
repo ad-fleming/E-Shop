@@ -21,7 +21,7 @@ const PaymentScreen = ({ history }) => {
     e.preventDefault()
 
     dispatch(savePaymentMethod(paymentMethod))
-    history.push('/placeholder')
+    history.push('/placeorder')
   }
 
   return (
