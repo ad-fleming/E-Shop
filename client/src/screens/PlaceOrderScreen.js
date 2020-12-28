@@ -10,9 +10,25 @@ const PlaceOrderScreen = () => {
 
   // TODO: Calculate prices
 
-  // cart.itemsPrice = 
+  const addDecimals = (num) =>{
+    return (Math.round(num * 100) / 100).toFixed(2)
+  }
 
-  const placeOrderHandler = () =>{
+  cart.itemsPrice = addDecimals(cart.cartItems.reduce(
+    (acc, item) => acc + item.price * item.qty,
+    0
+  ))
+
+  // FOR SIMPLICITY, WE'RE GOING TO SAY THAT IF THE ORDER IS UNDER $100, THEN IT IT IS 
+  // free SHIPPING
+  cart.shippingPrice = addDecimals(cart.itemsPrice > 100 ? 0: 100)
+
+  // We're going to assume a 15% tax
+  cart.taxPrice = addDecimals(Number((0.15 * cart.itemsPrice).toFixed(2)))
+
+  cart.totalPrice = addDecimals(Number(cart.itemsPrice) + Number(cart.shippingPrice) + Number(cart.taxPrice))
+
+  const placeOrderHandler = () => {
     console.log('order')
   }
 
