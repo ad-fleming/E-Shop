@@ -79,6 +79,7 @@ export const orderPayReducer = (
       }
     case ORDER_PAY_RESET:
       return {}
+      
     default:
       return state
   }

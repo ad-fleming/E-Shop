@@ -20,7 +20,7 @@ const OrderScreen = ({ match }) => {
   const { order, loading, error } = orderDetails
 
   const orderPay = useSelector((state) => state.orderPay)
-  const { loading: loadingPay, success: successPay } = orderPay
+  const { loading:loadingPay, success:successPay } = orderPay
 
   if (!loading) {
     // Calculate prices
@@ -46,19 +46,32 @@ const OrderScreen = ({ match }) => {
 
       document.body.appendChild(script)
     }
-    if (!order || order._id !== orderId || successPay) {
+    // if (!order || order._id !== orderId || successPay) {
+    //   dispatch({
+    //     type: ORDER_PAY_RESET,
+    //   })
+    //   dispatch(getOrderDetails(orderId))
+    // } else if (!order.isPaid) {
+    //   if (!window.paypal) {
+    //     addPayPalScript()
+    //   } else {
+    //     setSdkReady(true)
+    //   }
+    // }
+
+    if(!order || successPay){
       dispatch({
-        type: ORDER_PAY_RESET,
+        type: ORDER_PAY_RESET
       })
       dispatch(getOrderDetails(orderId))
-    } else if (!order.isPaid) {
-      if (!window.paypal) {
+    } else if (!order.isPaid){
+      if(!window.paypal){
         addPayPalScript()
       } else {
         setSdkReady(true)
       }
     }
-  }, [order, orderId, dispatch, successPay])
+  }, [dispatch, orderId, successPay, order])
 
   const successPaymentHandler = (paymentResult) => {
     console.log(paymentResult)
