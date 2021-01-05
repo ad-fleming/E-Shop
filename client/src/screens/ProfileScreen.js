@@ -4,6 +4,7 @@ import { LinkContainer } from 'react-router-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
+import Meta from '../components/Meta'
 import { getUserDetails, updateUserProfile } from '../actions/userActions'
 import { listMyOrders } from '../actions/orderActions'
 
@@ -52,6 +53,8 @@ const ProfileScreen = ({ location, history }) => {
   }
 
   return (
+    <>
+    <Meta title={`${user.name}'s Profile Page`} description='create and maintain your profile to shop amazing deals' keywords='profile, edit profile, manage profile' />
     <Row>
       <Col md={3}>
         <h2>User Profile</h2>
@@ -155,6 +158,7 @@ const ProfileScreen = ({ location, history }) => {
         )}
       </Col>
     </Row>
+    </>
   )
 }
 

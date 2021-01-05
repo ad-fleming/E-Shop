@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { Row, Col, ListGroup, Image, Form, Button, Card } from 'react-bootstrap'
 import Message from '../components/Message'
+import Meta from '../components/Meta'
 import { addToCart, removeFromCart } from '../actions/cartActions'
 
 const CartScreen = ({ match, location, history }) => {
@@ -38,6 +39,8 @@ const CartScreen = ({ match, location, history }) => {
             Your cart is empty <Link to='/'>Go Back</Link>
           </Message>
         ) : (
+          <>
+          <Meta title='Your Cart' description='You can place items you would like to purchase in your cart' keywords='cart' />
           <ListGroup variant='flush'>
             {cartItems.map((item) => (
               <ListGroup.Item key={item.product}>
@@ -79,6 +82,7 @@ const CartScreen = ({ match, location, history }) => {
               </ListGroup.Item>
             ))}
           </ListGroup>
+          </>
         )}
       </Col>
       <Col md={4}>

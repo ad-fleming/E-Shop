@@ -4,6 +4,7 @@ import { Table, Button } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
+import Meta from '../components/Meta'
 import { listOrders } from '../actions/orderActions'
 
 const OrderListScreen = ({history}) => {
@@ -32,6 +33,8 @@ const OrderListScreen = ({history}) => {
       ) : error ? (
         <Message variant='danger'>{error}</Message>
       ) : (
+        <>
+        <Meta title='Admin Order List' description='Admin order list' />
         <Table striped bordered hover responsive className='table-sm'>
           <thead>
             <tr>
@@ -72,6 +75,7 @@ const OrderListScreen = ({history}) => {
             ))}
           </tbody>
         </Table>
+        </>
       )}
     </>
   )
