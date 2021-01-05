@@ -8,17 +8,27 @@ import Product from '../models/productModel.js'
 // @route GET /api/products
 // @access Public
 const getProducts = asyncHandler(async (req, res) => {
+  // Setting to 2 because we only have 6 products
+  const pageSize = 10
+  const page = Number(req.query.pageNumber) || 1
+
+  // Key word is being passed into the url via the search bar on header
+  // this maps whatever is passed into the url into the keyword variable set below, and queries the database
+  // conditionally based upon entry. It uses regex to allow loosely matching searches
   const keyword = req.query.keyword
     ? {
         name: {
           $regex: req.query.keyword,
-          $options: 'i'
+          $options: 'i',
         },
       }
     : {}
 
+  const count = await Product.countDocuments({ ...keyword })
   const products = await Product.find({ ...keyword })
-  res.json(products)
+    .limit(pageSize)
+    .skip(pageSize * (page - 1))
+  res.json({ products, page, pages: Math.ceil(count / pageSize) })
 })
 
 // @desc Fetch product by ID
@@ -145,6 +155,15 @@ const createProductReview = asyncHandler(async (req, res) => {
   }
 })
 
+// @desc Get top rated products
+// @route GET /api/products/top
+// @access Public
+const getTopProducts = asyncHandler(async (req, res) => {
+  const products = await Product.find({}).sort({ rating: -1 }).limit(3)
+
+  res.json(products)
+})
+
 export {
   getProductById,
   getProducts,
@@ -152,4 +171,5 @@ export {
   createProduct,
   updateProduct,
   createProductReview,
+  getTopProducts
 }
