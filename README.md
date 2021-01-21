@@ -13,7 +13,7 @@ This project was built following the completion of Traversy Media's course on eC
 
 ## Deployed Website
 
-### Please click [here](https://afleming-portfolio.herokuapp.com/) to view the deployed website 
+### Please click [here](https://e-shopapp.herokuapp.com/) to view the deployed website 
 <br>
 <hr>
 
