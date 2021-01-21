@@ -84,7 +84,7 @@ Users can either sign in, or register a new account in order to purchase product
 <br>
 <br>
 
-![itemlinks](/client\public\images\eshopsignin.png)
+![itemlinks](client\src\assets\readmeimages\eshopsignin.png)
 
 <br>
 <br>
