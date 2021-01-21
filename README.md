@@ -96,7 +96,7 @@ E-shop's product list is displayed dynamically with built-in pagination as well 
 <br>
 <br>
 
-![itemlinks](client\public\images\eshopproductlist.png)
+![itemlinks](client/src/assets/readmeimages/eshopproductlist.png)
 
 
 ### Product Page
@@ -111,7 +111,7 @@ E-Shop has built in validation to prevent users from leaving multiple reviews on
 <br>
 <br>
 
-![itemlinks](/client\public\images\eshopsingleproduct.png)
+![itemlinks](client/src/assets/readmeimages/eshopsingleproduct.png)
 
 
 ## Shopping Cart
@@ -122,7 +122,7 @@ In its current state, E-Shop stores the users shopping cart in local storage, en
 <br>
 <br>
 
-![itemlinks](/client\public\images\eshopcart.png)
+![itemlinks](client/src/assets/readmeimages/eshopcart.png)
 
 
 ## Live Payments
@@ -132,19 +132,19 @@ E-Shop has the ability handle real transactions using the ___Paypal API__. Users
 <br>
 <br>
 
-![itemslink](/client\public\images\eshopshipping.png)
+![itemslink](client/src/assets/readmeimages/eshopshipping.png)
 
 <br>
 
-![itemslink](/client\public\images\eshoporderplacement.png)
+![itemslink](client/src/assets/readmeimages/eshoporderplacement.png)
 
 <br>
 
-![itemslink](/client\public\images\eshoppay.png)
+![itemslink](client/src/assets/readmeimages/eshoppay.png)
 
 <br>
 
-![itemslink](/client\public\images\eshopconfirmation.png)
+![itemslink](client/src/assets/readmeimages/eshopconfirmation.png)
 
 <br>
 
@@ -153,7 +153,7 @@ Users can access their profile via the drop down on the Nav Bar. Here they can m
 
 <br> 
 
-![itemlinks](/client\public\images\eshopuserprofile.png)
+![itemlinks](client/src/assets/readmeimages/eshopuserprofile.png)
 
 <br>
 <br>
@@ -165,7 +165,7 @@ Admins have a number of features available only to them. To access these feature
 
 <br>
 
-![itemLinks](/client\public\images\eshopadminoptions.png)
+![itemLinks](client/src/assets/readmeimages/eshopadminoptions.png)
 
 <br>
 
@@ -175,7 +175,7 @@ Admins are able to monitor users as well as update their profiles (including adm
 
 <br>
 
-![itemslink](/client\public\images\eshopadminuserlist.png)
+![itemslink](client/src/assets/readmeimages/eshopadminuserlist.png)
 
 <br>
 
@@ -185,11 +185,11 @@ Admins are able to monitor and update their products from the products dashboard
 
 <br>
 
-![itemslink](/client\public\images\eshopadminproductlist.png)
+![itemslink](client/src/assets/readmeimages/eshopadminproductlist.png)
 
 <br>
 
-![itemslink](/client\public\images\eshopadminsingleproduct.png)
+![itemslink](client/src/assets/readmeimages/eshopadminsingleproduct.png)
 
 <br>
 
@@ -199,15 +199,15 @@ Lastly, admins have the ability to track their orders via the order dashboard. H
 
 <br>
 
-![itemslink](/client\public\images\eshopadminorderlist.png)
+![itemslink](client/src/assets/readmeimages/eshopadminorderlist.png)
 
 <br>
 
-![itemslink](/client\public\images\eshopadminsingleorder.png)
+![itemslink](client/src/assets/readmeimages/eshopadminsingleorder.png)
 
 <br>
 
-![itemslink](/client\public\images\eshopadminorderdelivered.png)
+![itemslink](client/src/assets/readmeimages/eshopadminorderdelivered.png)
 
 <br>
 
