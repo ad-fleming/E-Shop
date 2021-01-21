@@ -84,7 +84,7 @@ Users can either sign in, or register a new account in order to purchase product
 <br>
 <br>
 
-![itemLink](client\src\assets\readmeimages\eshopsignin.png)
+![itemLink](client/src/assets/readmeimages/eshopsignin.png)
 
 <br>
 <br>
@@ -96,7 +96,7 @@ E-shop's product list is displayed dynamically with built-in pagination as well 
 <br>
 <br>
 
-![itemlinks](/client\public\images\eshopproductlist.png)
+![itemlinks](client\public\images\eshopproductlist.png)
 
 
 ### Product Page
